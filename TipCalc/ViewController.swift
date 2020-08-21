@@ -28,6 +28,9 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         print("view will appear")
         
+        // Enable keyboard on start
+        billTextField.becomeFirstResponder()
+        
         // Load tip and dark mode indices from UserDefaults
         tipPercentIndex = defaults.integer(forKey: "tipPercentIndex")
         darkModeIndex = defaults.integer(forKey: "darkModeIndex")
